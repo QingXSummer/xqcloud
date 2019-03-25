@@ -7,4 +7,4 @@ activiti:
   driverClass: com.mysql.jdbc.Driver
   url: jdbc:mysql://172.16.15.5:3306/test_activiti?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&allowMultiQueries=true
   username: root
-  password: root
+  password: 1qaz!QAZ
