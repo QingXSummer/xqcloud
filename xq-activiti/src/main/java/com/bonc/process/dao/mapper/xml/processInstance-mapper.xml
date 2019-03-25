@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bonc.process.dao.mapper.ProcessInstanceMapper">
+
+<!-- 	<resultMap type="com.bonc.process.formbean.ProcessVariableTemp" id="processVariableMap">
+		<result property="processInstanceId" column="RES.PROC_INST_ID_"/>	
+		<result property="variables" column="BYT.BYTES_"/>	
+	</resultMap> -->
+
+	<select id="listProcessInsBystarter" parameterType="string" resultType="com.bonc.process.dao.formbean.ProcessVariableByte">
+		SELECT DISTINCT
+<!-- 			
+			RES.START_USER_ID_,
+			VAR.TASK_ID_, 
+ 			RES.START_TIME_,
+			RES.END_TIME_, -->
+			RES.PROC_INST_ID_ as processInstanceId,
+			BYT.BYTES_  as variables
+	FROM
+			ACT_HI_PROCINST RES
+	LEFT OUTER JOIN act_hi_varinst VAR ON RES.PROC_INST_ID_= VAR.EXECUTION_ID_  
+	LEFT OUTER JOIN act_ge_bytearray BYT ON VAR.BYTEARRAY_ID_ = BYT.ID_
+	WHERE
+			VAR.TASK_ID_ IS NULL 
+	AND
+			RES.START_USER_ID_ = #{userId}
+	ORDER BY
+			RES.ID_ ASC
+		
+	</select>
+
+	
+</mapper>
