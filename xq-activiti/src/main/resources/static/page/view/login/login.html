@@ -1,10 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-    
-<%
-	String path = request.getContextPath();
-	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
-%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="zh-CN">
   <head>
@@ -16,9 +9,9 @@
     <title>深度云分析平台</title>
 
     <!-- Bootstrap -->
-    <link href="<%=path%>/page/resource/bootstrap3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../resource/bootstrap3.3.5/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="<%=path%>/page/view/login/login.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,12 +24,12 @@
 
 <input type="hidden" id="path" value=<%=path %>></input>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<%=path%>/page/resource/bootstrap3.3.5/js/jquery.min.js"></script>
+    <script src="../../resource/bootstrap3.3.5/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<%=path%>/page/resource/bootstrap3.3.5/js/bootstrap.js"></script>
-    <script src="<%=path%>/page/resource/bootstrap3.3.5/bootstrapvalidator/js/bootstrapValidator.js"></script>
+    <script src="../../resource/bootstrap3.3.5/js/bootstrap.js"></script>
+    <script src="../../resource/bootstrap3.3.5/bootstrapvalidator/js/bootstrapValidator.js"></script>
 <!--     <script src="resource/bootstrap3.3.5/js/val.js"></script> -->
-    <script src="<%=path%>/page/view/login/login.js"></script>
+    <script src="login.js"></script>
     
 
     
@@ -44,7 +37,7 @@
         <div class="container">
         <h2 class="form-signin-heading" style="color: DodgerBlue;font-weight:bolder;position: absolute; left:30%; top:20%;font-size: 45px">中国移动深度分析云系统</h2>
        <div class="width-1000">
-      <form class="form-inline" action="login/login.do" method="post" id="loginForm">
+      <form class="form-inline" action="/login/login.do" method="post" id="loginForm">
 
          <div class="form-group" >
         <label for="username" class="sr-only">用户名</label>

@@ -18,7 +18,7 @@
 
 		<property name="dataSource" ref="dataSource" />
 		<property name="transactionManager" ref="transactionManager" />
-		<property name="databaseSchemaUpdate" value="update" />
+		<property name="databaseSchemaUpdate" value="false" />
 		<property name="jobExecutorActivate" value="false" />
 		<property name="enableDatabaseEventLogging" value="true" />
 	</bean>

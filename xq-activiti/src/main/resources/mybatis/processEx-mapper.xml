@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bonc.process.dao.mapper.ProcessExMapper">
+
+
+	<select id="getImageByteByModelId" parameterType="string" resultType="map">
+	
+		SELECT
+			a.BYTES_ as byte
+		FROM
+			act_ge_bytearray a,
+			act_re_model b
+		WHERE
+			a.ID_ = b.EDITOR_SOURCE_EXTRA_VALUE_ID_
+		AND
+			b.ID_ = #{modelId}
+
+	</select>
+
+	
+</mapper>

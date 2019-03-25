@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bonc.process.dao.mapper.UserMapper">
+
+	<resultMap type="com.bonc.process.dao.model.ProcessUser" id="userMap">
+		<id property="userId" column="userId"/>
+		<result property="userName" column="userName"/>
+		<!-- <result property="loginId" column="login_id"/> -->
+		<result property="password" column="pwd"/>
+		<result property="tel" column="tel"/>
+		<result property="mail" column="mail"/>
+		
+	</resultMap>
+	
+
+	
+</mapper>
