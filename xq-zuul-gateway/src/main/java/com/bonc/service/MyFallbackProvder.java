@@ -1,4 +1,4 @@
-package xq.service;
+package com.bonc.service;
 
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.HttpHeaders;

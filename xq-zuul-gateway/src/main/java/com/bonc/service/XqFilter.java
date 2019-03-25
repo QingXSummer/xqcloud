@@ -1,4 +1,4 @@
-package xq.service;
+package com.bonc.service;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;

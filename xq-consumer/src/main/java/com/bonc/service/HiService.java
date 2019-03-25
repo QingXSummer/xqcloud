@@ -1,4 +1,4 @@
-package xq.service;
+package com.bonc.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
