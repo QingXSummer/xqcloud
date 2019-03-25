@@ -1,0 +1,13 @@
+/*����*/
+*{font-size:14px; color:#666;}
+
+a{ text-decoration:none; }
+img{display:inline;}
+input{ margin:0; padding:0;
+ border:none; outline:none;}
+
+
+.box {height:100%; background:#FFF; position:absolute; width:100%;} 
+fieldset{padding:.35em .625em .75em;margin:0 2px;border:1px solid silver}
+
+legend{padding:.5em;border:0;width:auto}
