@@ -43,7 +43,7 @@ $(function(){
 			
 			$.ajax({
 				type : "post",
-				url : "/login/login",
+				url : ACTIVITI.CONFIG.contextRoot+"/login/login",
 				dataType : "json",
 				data:data,
 				success : function(data) {
